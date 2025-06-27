@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("drConverter")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d147f7ccb3c144d14c1319481232dab0553e44ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("drConverter")]
 [assembly: System.Reflection.AssemblyTitleAttribute("drConverter")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,21 +8,24 @@ namespace drConverter
         public static T Convert<T>(DataRow dataRow)
             where T : new()
         {
-            T ModelObject = new T();
+            T modelObject = new();
 
-            List<string> ListOfColumns = dataRow
-                .Table.Columns.Cast<DataColumn>()
-                .Select(col => col.ColumnName)
-                .ToList();
+            List<string> listOfColumns =
+            [
+                .. dataRow.Table.Columns.Cast<DataColumn>().Select(col => col.ColumnName),
+            ];
 
-            var propertyMap = typeof(T)
+            Dictionary<string, PropertyInfo> propertyMap = typeof(T)
                 .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .ToDictionary(p => p.Name, StringComparer.OrdinalIgnoreCase);
 
-            foreach (var column in ListOfColumns)
+            foreach (string column in listOfColumns)
             {
-                var value = dataRow[column];
-                if (propertyMap.TryGetValue(column, out var propertyInfo))
+                object value = dataRow[column];
+                if (
+                    propertyMap.TryGetValue(column, out PropertyInfo? propertyInfo)
+                    && propertyInfo != null
+                )
                 {
                     if (value != DBNull.Value)
                     {
@@ -31,17 +34,34 @@ namespace drConverter
                         object convertedValue;
 
                         if (underlyingType.IsEnum)
-                            convertedValue = Enum.Parse(underlyingType, value.ToString());
+                            convertedValue = Enum.Parse(
+                                underlyingType,
+                                System.Convert.ToString(value) ?? string.Empty
+                            );
                         else if (underlyingType == typeof(Guid))
-                            convertedValue = Guid.Parse(value.ToString());
+                            convertedValue = Guid.Parse(
+                                System.Convert.ToString(value) ?? string.Empty
+                            );
                         else
                             convertedValue = System.Convert.ChangeType(value, underlyingType);
 
-                        propertyInfo.SetValue(ModelObject, convertedValue);
+                        propertyInfo.SetValue(modelObject, convertedValue);
                     }
                 }
             }
-            return ModelObject;
+            return modelObject;
+        }
+
+        public static List<T> ConvertList<T>(DataTable dataTable)
+            where T : new()
+        {
+            List<T> modelObjectList = new List<T>();
+
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                modelObjectList.Add(Convert<T>(dataRow));
+            }
+            return modelObjectList;
         }
     }
 }

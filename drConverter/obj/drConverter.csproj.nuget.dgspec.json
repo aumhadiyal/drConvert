@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj": {}
+    "d:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj": {}
   },
   "projects": {
-    "D:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj": {
+    "d:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj",
+        "projectUniqueName": "d:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj",
         "projectName": "drConverter",
-        "projectPath": "D:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj",
+        "projectPath": "d:\\Aum\\aumx64\\drConvert\\drConverter\\drConverter.csproj",
         "packagesPath": "C:\\Users\\sspl1462\\.nuget\\packages\\",
-        "outputPath": "D:\\Aum\\aumx64\\drConvert\\drConverter\\obj\\",
+        "outputPath": "d:\\Aum\\aumx64\\drConvert\\drConverter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sspl1462\\AppData\\Roaming\\NuGet\\NuGet.Config"
