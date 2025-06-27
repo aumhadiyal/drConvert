@@ -1,0 +1,14 @@
+D:\Aum\aumx64\drConverter\bin\Debug\net9.0\drConverter.exe
+D:\Aum\aumx64\drConverter\bin\Debug\net9.0\drConverter.deps.json
+D:\Aum\aumx64\drConverter\bin\Debug\net9.0\drConverter.runtimeconfig.json
+D:\Aum\aumx64\drConverter\bin\Debug\net9.0\drConverter.dll
+D:\Aum\aumx64\drConverter\bin\Debug\net9.0\drConverter.pdb
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\drConverter.GeneratedMSBuildEditorConfig.editorconfig
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\drConverter.AssemblyInfoInputs.cache
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\drConverter.AssemblyInfo.cs
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\drConverter.csproj.CoreCompileInputs.cache
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\drConverter.dll
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\refint\drConverter.dll
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\drConverter.pdb
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\drConverter.genruntimeconfig.cache
+D:\Aum\aumx64\drConverter\obj\Debug\net9.0\ref\drConverter.dll
